@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="255552206">
+    <data-source source="LOCAL" name="Rails blog: development" product="" version="" jdbc-version="" driver-name="" driver-version="" uuid="d85a01f6-f998-4c63-bd9a-7119b157c0ab">
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:E:\ruby\project\blog\blog\db\development.sqlite3</jdbc-url>
+      <libraries>
+        <library>
+          <url>file://</url>
+        </library>
+      </libraries>
+    </data-source>
+  </component>
+</project>
+

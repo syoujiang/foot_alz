@@ -1,0 +1,41 @@
+<h1>Listing footballs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>S start</th>
+      <th>S end</th>
+      <th>P start</th>
+      <th>P end</th>
+      <th>F start</th>
+      <th>F end</th>
+      <th>Tmp</th>
+      <th>Tmp2</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @footballs.each do |football| %>
+      <tr>
+        <td><%= football.s_start %></td>
+        <td><%= football.s_end %></td>
+        <td><%= football.p_start %></td>
+        <td><%= football.p_end %></td>
+        <td><%= football.f_start %></td>
+        <td><%= football.f_end %></td>
+        <td><%= football.tmp %></td>
+        <td><%= football.tmp2 %></td>
+        <td><%= link_to 'Show', football %></td>
+        <td><%= link_to 'Edit', edit_football_path(football) %></td>
+        <td><%= link_to 'Destroy', football, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Football', new_football_path %>

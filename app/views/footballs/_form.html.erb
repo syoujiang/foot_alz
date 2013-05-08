@@ -1,0 +1,52 @@
+<%= form_for(@football) do |f| %>
+  <% if @football.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@football.errors.count, "error") %> prohibited this football from being saved:</h2>
+
+      <ul>
+      <% @football.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :s_start %><br>
+    <%= f.text_field :s_start %>
+  </div>
+  <div class="field">
+    <%= f.label :s_end %><br>
+    <%= f.text_field :s_end %>
+  </div>
+  <div class="field">
+    <%= f.label :p_start %><br>
+    <%= f.text_field :p_start %>
+  </div>
+  <div class="field">
+    <%= f.label :p_end %><br>
+    <%= f.text_field :p_end %>
+  </div>
+  <div class="field">
+    <%= f.label :f_start %><br>
+    <%= f.text_field :f_start %>
+  </div>
+  <div class="field">
+    <%= f.label :f_end %><br>
+    <%= f.text_field :f_end %>
+  </div>
+  <div class="field">
+    <%= f.label :tmp %><br>
+    <%= f.text_field :tmp %>
+  </div>
+  <div class="field">
+    <%= f.label :tmp2 %><br>
+    <%= f.text_field :tmp2 %>
+  </div>
+  <div class="field">
+       <%= select("foottype", "foottype_id", @football_type.collect{|t| [t.name, t.id]}, { :include_blank => false }) %>
+ </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
